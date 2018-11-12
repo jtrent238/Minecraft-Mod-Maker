@@ -14,6 +14,11 @@ ask_Create = input("Do you want to make a new Block or Item?: ")
 if ask_Create in ['Block', 'block', 'B', 'b']:
 	ask_blockName = input("Enter a name for your new block: ")
 	ask_blockHardness = input("Enter the hardness for your new block: ")
+	# try:
+		# blockHardness = int(ask_blockHardness)
+		# print('valid')
+	# except ValueError:
+		# print('invalid')
 if ask_Create in ['Item', 'item', 'I', 'i']:
 	ask_itemName = input("Enter a name for your new item: ")
 # else:
@@ -25,6 +30,7 @@ ask_userName = 'testuser'
 ask_modVersion = 'testver'
 ask_blockName = 'testblock'
 ask_itemName = 'testitem'
+ask_blockHardness = '5'
 
 def createFolder(directory):
     try:
@@ -53,8 +59,10 @@ createMainClass.write("public static string MODAUTHOR = "  + '"jtrent238, ' + as
 createMainClass.write("public static string MODVERSION = " + '"' + ask_modVersion + '"' +";"+ "\n");
 if ask_Create in ['Block', 'block', 'B', 'b']:
 	createMainClass.write("public static Block " + ask_blockName + ";"+ "\n")
-	createMainClass.write(ask_blockName + ' new Block(Material.rock).setBlockName("' + ask_blockName + '").setBlockTextureName("' + ask_blockName + '").setCreativeTab(' + mainClass + mainClass + ').setHardness(' + ask_blockHardness + 'F");')
+	createMainClass.write(ask_blockName + ' new Block(Material.rock).setBlockName("' + ask_blockName + '").setBlockTextureName("' + ask_blockName + '").setCreativeTab(' + mainClass + '.' + 'tab_' + mainClass + ').setHardness(' + ask_blockHardness + 'F);' + '\n')
+	print('Your new block has been created!')
 if ask_Create in ['Item', 'item', 'I', 'i']:
 	createMainClass.write("public static Item " + ask_itemName + ";"+ "\n")
+	print('Your new item has been created!')
 createMainClass.write("}");
 
