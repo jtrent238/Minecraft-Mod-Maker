@@ -1,0 +1,63 @@
+****************************
+ Powered By MCP:             
+ http://modcoderpack.com/    
+ Searge, ProfMobius, Fesh0r, 
+ R4wk, ZeuX, IngisKahn, bspkrs
+ MCP Data version : unknown
+****************************
+:downloadClient
+:downloadServer
+:getVersionJson
+:extractUserDev UP-TO-DATE
+:mergeJars
+:applyBinPatches
+:downloadMcpTools
+:extractMcpData UP-TO-DATE
+:genSrgs SKIPPED
+:deobfBinJar
+Applying SpecialSource...
+Applying Exceptor...
+Stripping synthetics...
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:sourceMainJava
+:compileJavaerror: error reading C:\Users\PK13601\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\dfb46df79089925c147c07a0ee0359468b7fc45f\lwjgl-platform-2.9.1-natives-windows.jar; error in opening zip file
+warning: [options] bootstrap class path not set in conjunction with -source 1.6
+C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:36: error: <identifier> expected
+testblock = new Block(Material.rock).setBlockName("testblock").setBlockTextureName("testblock").setCreativeTab(mod_testmodMain.tab_mod_testmodMain).setHardness(5F);
+         ^
+C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:40: error: illegal start of expression
+public Static CreativeTabs;
+^
+C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:42: error: illegal start of expression
+public Item getTabIconItem() {
+^
+C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:42: error: ';' expected
+public Item getTabIconItem() {
+                          ^
+C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:45: error: illegal start of expression
+public boolean hasSearchBar(){
+^
+C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:45: error: ';' expected
+public boolean hasSearchBar(){
+                           ^
+C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:55: error: reached end of file while parsing
+}
+ ^
+7 errors
+1 warning
+ FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 41.845 secs
