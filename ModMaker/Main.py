@@ -135,9 +135,10 @@ copy(ask_modName + '/' + mainClass + '.java', ask_modName + '/MinecraftForge/src
 	
 if ask_compileMod in ['Yes', 'yes', 'y']:
 	print('Compileing Mod...')
-	compileScript = open(ask_modName + '/MinecraftForge/compileScript.bat', 'w')
+	compileScript = open('compileScript.bat', 'w')
 	compileScript.write('@echo off' + '\n')
 	compileScript.write('cls' + '\n')
+	compileScript.write('cd ' + ask_modName + '\MinecraftForge/' + '\n')
 	compileScript.write('gradlew setupdecompworkspace' + '\n')
 	compileScript.write('gradlew build' + '\n')
 	compileScript.close()
@@ -156,16 +157,21 @@ if ask_compileMod in ['Yes', 'yes', 'y']:
 	ask_testMod = input('do you want to test your new mod?')
 	if ask_testMod in ['Yes', 'yes', 'y']:
 		print('testingyes')
-		runScript.open = (ask_modName + '/MinecraftForge/runScript.bat', 'w')
+		runScript.open = ('runScript.bat', 'w')
 		runScript.write('@echo off' + '\n')
 		runScript.write('cls' + '\n')
+		runScript.write('cd ' + ask_modName + '\MinecraftForge/' + '\n')
 		runScript.write('gradlew runClient' + '\n')
 		runScript.close()
 		# os.system('gradlew runClient') 
-		os.system('cd ' + ask_modName)  
+		# os.system('cd ' + ask_modName)  
 		os.system('start runScript.bat')  
 	if ask_testMod in ['No', 'no', 'n']:
 		print('testingno')
 	
 if ask_compileMod in ['No', 'no', 'n']:
 	print('Mod is complete')
+	
+print('Cleaning up some Junk')
+os.remove('compileScript.bat')
+os.remove('runScript.bat')
