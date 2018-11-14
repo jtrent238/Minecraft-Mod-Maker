@@ -11,9 +11,9 @@ print("=========================================================================
 
 
 #Get input from user
-# ask_userName = input("Enter your Username [NO SPACES] [Alphanumeric ONLY] : ");
-# ask_modName = input("Enter mod name [NO SPACES] [Alphanumeric ONLY] : ");
-# ask_modVersion = input("Enter mod version [NO SPACES] [Alphanumeric ONLY] : ");
+ask_userName = input("Enter your Username [NO SPACES] [Alphanumeric ONLY] : ");
+ask_modName = input("Enter mod name [NO SPACES] [Alphanumeric ONLY] : ");
+ask_modVersion = input("Enter mod version [NO SPACES] [Alphanumeric ONLY] : ");
 
 ask_Create = input("Do you want to make a new Block or Item? ")
 if ask_Create in ['Block', 'block', 'B', 'b']:
@@ -30,12 +30,12 @@ if ask_Create in ['Item', 'item', 'I', 'i']:
 	# print("you have entered something incorrectly");
 
 #FOR TESTING ONLY
-ask_modName = 'testmod'
-ask_userName = 'testuser'
-ask_modVersion = 'testver'
-ask_blockName = 'testblock'
-ask_itemName = 'testitem'
-ask_blockHardness = '5'
+# ask_modName = 'testmod'
+# ask_userName = 'testuser'
+# ask_modVersion = 'testver'
+# ask_blockName = 'testblock'
+# ask_itemName = 'testitem'
+# ask_blockHardness = '5'
 
 def createFolder(directory):
     try:
@@ -63,30 +63,31 @@ createMainClass.write("public static string MODID = " + '"' + ask_modName + '"' 
 createMainClass.write("public static string MODNAME = " + '"' + ask_modName + '"' +";"+ "\n");
 createMainClass.write("public static string MODAUTHOR = "  + '"jtrent238, ' + ask_userName + '"' +";"+ "\n");
 createMainClass.write("public static string MODVERSION = " + '"' + ask_modVersion + '"' +";"+ "\n");
-createMainClass.write('@Mod.EventHandler' + '\n')
-createMainClass.write('public void init(FMLInitializationEvent event)' + '\n')
-createMainClass.write('{' + '\n')
 if ask_Create in ['Block', 'block', 'B', 'b']:
 	createMainClass.write("public static Block " + ask_blockName + ";"+ "\n")
-	createMainClass.write(ask_blockName + ' = new Block(Material.rock).setBlockName("' + ask_blockName + '").setBlockTextureName("' + ask_blockName + '").setCreativeTab(' + mainClass + '.' + 'tab_' + mainClass + ').setHardness(' + ask_blockHardness + 'F);' + '\n')
+	createMainClass.write(ask_blockName + ' = new Block(Material.rock).setBlockName("' + ask_blockName + '").setBlockTextureName("' + ask_blockName + '").setCreativeTab(''Tabs.Blocks'').setHardness(' + ask_blockHardness + 'F);' + '\n')
 	print('Your new block has been created!')
 if ask_Create in ['Item', 'item', 'I', 'i']:
 	createMainClass.write("public static Item " + ask_itemName + ";"+ "\n")
-	createMainClass.write(ask_itemName + ' = new Item().setUnlocalizedName("' + ask_itemName + '").setTextureName("' + ask_itemName + '").setCreativeTab(' + mainClass + '.' + 'tab_' + mainClass + ');' + '\n')
+	createMainClass.write(ask_itemName + ' = new Item("' + ask_itemName+ '").setUnlocalizedName("' + ask_itemName + '").setTextureName("' + ask_itemName + '").setCreativeTab(''Tabs.Items'');' + '\n')
 	print('Your new item has been created!')
-createMainClass.write('public static CreativeTabs ' + mainClass + ' = new CreativeTabs("' + mainClass + '")' + '\n')
-createMainClass.write('public Item getTabIconItem() {' + '\n')
-createMainClass.write('return new ItemStack(Items.diamond).getItem();' + '\n')
-createMainClass.write('}' + '\n')
-createMainClass.write('public boolean hasSearchBar(){' + '\n')
-createMainClass.write('return false;' + '\n')
-createMainClass.write('}' + '\n')
-createMainClass.write('};' + '\n')
 createMainClass.write('@Mod.EventHandler' + '\n')
-createMainClass.write('public void postInit(FMLPostInitializationEvent event) {' + '\n')
+createMainClass.write('public void init(FMLInitializationEvent event)' + '\n')
 createMainClass.write('{' + '\n')
-createMainClass.write('}' + '\n')
-createMainClass.write('}' + '\n')
+# createMainClass.write('public static CreativeTabs;' + '\n')
+# createMainClass.write(mainClass + ' = new CreativeTabs("' + mainClass + '");' + '\n')
+# createMainClass.write('public Item getTabIconItem() {' + '\n')
+# createMainClass.write('return new ItemStack(Items.diamond).getItem();' + '\n')
+# createMainClass.write('}' + '\n')
+# createMainClass.write('public boolean hasSearchBar(){' + '\n')
+# createMainClass.write('return false;' + '\n')
+# createMainClass.write('}' + '\n')
+# createMainClass.write('};' + '\n')
+createMainClass.write('@Mod.EventHandler' + '\n')
+# createMainClass.write('public void postInit(FMLPostInitializationEvent event) {' + '\n')
+# createMainClass.write('{' + '\n')
+# createMainClass.write('}' + '\n')
+# createMainClass.write('}' + '\n')
 # createMainClass.write('{' + '\n')
 createMainClass.write("}");
 createMainClass.close()
@@ -139,6 +140,7 @@ if ask_compileMod in ['Yes', 'yes', 'y']:
 	compileScript.write('@echo off' + '\n')
 	compileScript.write('cls' + '\n')
 	compileScript.write('cd ' + ask_modName + '\MinecraftForge/' + '\n')
+	compileScript.write('gradlew cleancache' + '\n')
 	compileScript.write('gradlew setupdecompworkspace' + '\n')
 	compileScript.write('gradlew build' + '\n')
 	compileScript.close()
@@ -146,7 +148,7 @@ if ask_compileMod in ['Yes', 'yes', 'y']:
 	# compileScript.write('gradlew idea')
 	# os.system('cd ' + ask_modName + '/' + 'MinecraftForge/') 
 	os.system('cd ' + ask_modName)  
-	os.system('dir')  
+	# os.system('dir')  
 	
 	os.system('start compileScript.bat')  
 	# os.system('gradlew setupdecompworkspace') 
@@ -154,24 +156,32 @@ if ask_compileMod in ['Yes', 'yes', 'y']:
 	# os.system('gradlew idea') 
 	# os.system('gradlew build') 
 	print('Mod compiled')
-	ask_testMod = input('do you want to test your new mod?')
+	ask_testMod = input('do you want to test your new mod?: ')
 	if ask_testMod in ['Yes', 'yes', 'y']:
 		print('testingyes')
-		runScript.open = ('runScript.bat', 'w')
+		runScript = open('runScript.bat', 'w')
 		runScript.write('@echo off' + '\n')
 		runScript.write('cls' + '\n')
 		runScript.write('cd ' + ask_modName + '\MinecraftForge/' + '\n')
-		runScript.write('gradlew runClient' + '\n')
+		runScript.write('gradlew runclient' + '\n')
 		runScript.close()
 		# os.system('gradlew runClient') 
 		# os.system('cd ' + ask_modName)  
-		os.system('start runScript.bat')  
+		os.system('cd ' + ask_modName)  
+		# os.system('dir')  
+	
+		os.system('start runScript.bat')   
 	if ask_testMod in ['No', 'no', 'n']:
 		print('testingno')
 	
 if ask_compileMod in ['No', 'no', 'n']:
 	print('Mod is complete')
-	
-print('Cleaning up some Junk')
-os.remove('compileScript.bat')
-os.remove('runScript.bat')
+
+ask_cleanup = input('Do you want to clean up the build scripts?: ')
+
+if ask_cleanup in ['Yes', 'yes', 'y']:
+	print('Cleaning up some Junk')
+	os.remove('compileScript.bat')
+	os.remove('runScript.bat')
+if ask_cleanup in ['No', 'no', 'n']:
+	print('Will NOT clean any files')
