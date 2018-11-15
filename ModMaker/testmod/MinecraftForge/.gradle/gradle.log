@@ -5,59 +5,253 @@
  R4wk, ZeuX, IngisKahn, bspkrs
  MCP Data version : unknown
 ****************************
-:downloadClient
-:downloadServer
-:getVersionJson
-:extractUserDev UP-TO-DATE
-:mergeJars
-:applyBinPatches
-:downloadMcpTools
-:extractMcpData UP-TO-DATE
-:genSrgs SKIPPED
-:deobfBinJar
-Applying SpecialSource...
-Applying Exceptor...
-Stripping synthetics...
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
-:sourceMainJava
-:compileJavaerror: error reading C:\Users\PK13601\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\dfb46df79089925c147c07a0ee0359468b7fc45f\lwjgl-platform-2.9.1-natives-windows.jar; error in opening zip file
-warning: [options] bootstrap class path not set in conjunction with -source 1.6
-C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:36: error: <identifier> expected
-testblock = new Block(Material.rock).setBlockName("testblock").setBlockTextureName("testblock").setCreativeTab(mod_testmodMain.tab_mod_testmodMain).setHardness(5F);
-         ^
-C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:40: error: illegal start of expression
-public Static CreativeTabs;
-^
-C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:42: error: illegal start of expression
-public Item getTabIconItem() {
-^
-C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:42: error: ';' expected
-public Item getTabIconItem() {
-                          ^
-C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:45: error: illegal start of expression
-public boolean hasSearchBar(){
-^
-C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:45: error: ';' expected
-public boolean hasSearchBar(){
-                           ^
-C:\Users\PK13601\Desktop\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\sources\java\com\jtrent238\modmaker\mod\mod_testmodMain.java:55: error: reached end of file while parsing
-}
- ^
-7 errors
-1 warning
- FAILED
+:sourceMainJava UP-TO-DATE
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar
+:getVersionJson
+:extractUserDev UP-TO-DATE
+:extractNatives UP-TO-DATE
+:getAssetsIndex
+:getAssets
+:makeStart
+[ant:javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[ant:javac] 1 warning
+:runClient
+[20:27:47] [main/INFO] [GradleStart]: Extra: []
+[20:27:47] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/jtren/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[20:27:47] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[20:27:47] [main/INFO] [FML]: Forge Mod Loader version 7.99.16.1448 for Minecraft 1.7.10 loading
+[20:27:47] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_191, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_191\jre
+[20:27:47] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[20:27:47] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[20:27:47] [main/INFO] [GradleStart]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
+[20:27:47] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[20:27:47] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[20:27:47] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[20:27:47] [main/ERROR] [FML]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[20:27:49] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[20:27:49] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[20:27:49] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[20:27:50] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[20:27:50] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
+[20:27:50] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
+[20:27:50] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[20:27:51] [main/INFO]: Setting user: Player390
+[20:27:53] [Client thread/INFO]: LWJGL Version: 2.9.1
+[20:27:54] [Client thread/INFO] [STDOUT]: [cpw.mods.fml.client.SplashProgress:start:188]: ---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
 
-FAILURE: Build failed with an exception.
+Time: 11/14/18 8:27 PM
+Description: Loading screen debug info
 
-* What went wrong:
-Execution failed for task ':compileJava'.
-> Compilation failed; see the compiler error output for details.
+This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
 
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
 
-BUILD FAILED
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
 
-Total time: 41.845 secs
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_191, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 189256752 bytes (180 MB) / 232259584 bytes (221 MB) up to 3812622336 bytes (3636 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 388.13' Renderer: 'GeForce GT 620/PCIe/SSE2'
+[20:27:55] [Client thread/INFO] [MinecraftForge]: Attempting early MinecraftForge initialization
+[20:27:55] [Client thread/INFO] [FML]: MinecraftForge v10.13.4.1448 Initialized
+[20:27:55] [Client thread/INFO] [FML]: Replaced 183 ore recipies
+[20:27:55] [Client thread/INFO] [MinecraftForge]: Completed early MinecraftForge initialization
+[20:27:55] [Client thread/INFO] [FML]: Found 0 mods from the command line. Injecting into mod discoverer
+[20:27:55] [Client thread/INFO] [FML]: Searching C:\Users\jtren\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\eclipse\mods for mods
+[20:27:58] [Client thread/ERROR] [FML]: The mcmod.info file in modid-1.0.jar cannot be parsed as valid JSON. It will be ignored
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Expected ':' at line 11 column 4
+	at com.google.gson.internal.Streams.parse(Streams.java:56) ~[Streams.class:?]
+	at com.google.gson.JsonParser.parse(JsonParser.java:84) ~[JsonParser.class:?]
+	at com.google.gson.JsonParser.parse(JsonParser.java:59) ~[JsonParser.class:?]
+	at cpw.mods.fml.common.MetadataCollection.from(MetadataCollection.java:55) [MetadataCollection.class:?]
+	at cpw.mods.fml.common.discovery.JarDiscoverer.discover(JarDiscoverer.java:53) [JarDiscoverer.class:?]
+	at cpw.mods.fml.common.discovery.ContainerType.findMods(ContainerType.java:42) [ContainerType.class:?]
+	at cpw.mods.fml.common.discovery.ModCandidate.explore(ModCandidate.java:71) [ModCandidate.class:?]
+	at cpw.mods.fml.common.discovery.ModDiscoverer.identifyMods(ModDiscoverer.java:131) [ModDiscoverer.class:?]
+	at cpw.mods.fml.common.Loader.identifyMods(Loader.java:364) [Loader.class:?]
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:489) [Loader.class:?]
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:208) [FMLClientHandler.class:?]
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:522) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:164) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.11.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
+	at GradleStart.main(Unknown Source) [start/:?]
+Caused by: com.google.gson.stream.MalformedJsonException: Expected ':' at line 11 column 4
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1505) ~[JsonReader.class:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:519) ~[JsonReader.class:?]
+	at com.google.gson.stream.JsonReader.peek(JsonReader.java:414) ~[JsonReader.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:644) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:667) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:659) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:642) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.Streams.parse(Streams.java:44) ~[Streams.class:?]
+	... 21 more
+[20:27:58] [Client thread/INFO] [examplemod]: Mod examplemod is missing the required element 'name'. Substituting examplemod
+[20:27:58] [Client thread/INFO] [FML]: Attempting to reparse the mod container modid-1.0.jar
+[20:27:58] [Client thread/ERROR] [FML]: The mcmod.info file in modid-1.0.jar cannot be parsed as valid JSON. It will be ignored
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Expected ':' at line 11 column 4
+	at com.google.gson.internal.Streams.parse(Streams.java:56) ~[Streams.class:?]
+	at com.google.gson.JsonParser.parse(JsonParser.java:84) ~[JsonParser.class:?]
+	at com.google.gson.JsonParser.parse(JsonParser.java:59) ~[JsonParser.class:?]
+	at cpw.mods.fml.common.MetadataCollection.from(MetadataCollection.java:55) [MetadataCollection.class:?]
+	at cpw.mods.fml.common.discovery.JarDiscoverer.discover(JarDiscoverer.java:53) [JarDiscoverer.class:?]
+	at cpw.mods.fml.common.discovery.ContainerType.findMods(ContainerType.java:42) [ContainerType.class:?]
+	at cpw.mods.fml.common.discovery.ModCandidate.explore(ModCandidate.java:75) [ModCandidate.class:?]
+	at cpw.mods.fml.common.discovery.ModDiscoverer.identifyMods(ModDiscoverer.java:131) [ModDiscoverer.class:?]
+	at cpw.mods.fml.common.Loader.identifyMods(Loader.java:364) [Loader.class:?]
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:489) [Loader.class:?]
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:208) [FMLClientHandler.class:?]
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:522) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:164) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_191]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.11.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
+	at GradleStart.main(Unknown Source) [start/:?]
+Caused by: com.google.gson.stream.MalformedJsonException: Expected ':' at line 11 column 4
+	at com.google.gson.stream.JsonReader.syntaxError(JsonReader.java:1505) ~[JsonReader.class:?]
+	at com.google.gson.stream.JsonReader.doPeek(JsonReader.java:519) ~[JsonReader.class:?]
+	at com.google.gson.stream.JsonReader.peek(JsonReader.java:414) ~[JsonReader.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:644) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:667) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:659) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.bind.TypeAdapters$25.read(TypeAdapters.java:642) ~[TypeAdapters$25.class:?]
+	at com.google.gson.internal.Streams.parse(Streams.java:44) ~[Streams.class:?]
+	... 21 more
+[20:27:58] [Client thread/INFO] [examplemod]: Mod examplemod is missing the required element 'name'. Substituting examplemod
+[20:27:58] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[20:27:59] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, examplemod, testmod] at CLIENT
+[20:27:59] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, examplemod, testmod] at SERVER
+[20:27:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:examplemod, FMLFileResourcePack:testmod
+[20:27:59] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[20:27:59] [Client thread/INFO] [FML]: Found 341 ObjectHolder annotations
+[20:27:59] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[20:27:59] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[20:27:59] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[20:27:59] [Client thread/INFO] [FML]: Applying holder lookups
+[20:27:59] [Client thread/INFO] [FML]: Holder lookups applied
+[20:27:59] [Client thread/INFO] [FML]: Injecting itemstacks
+[20:27:59] [Client thread/INFO] [FML]: Itemstack injection complete
+[20:27:59] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:27:59] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[20:28:00] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[20:28:00] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:28:00] [Thread-8/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[20:28:00] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:28:00] [Sound Library Loader/INFO]: Sound engine started
+[20:28:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[20:28:02] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[20:28:02] [Client thread/INFO] [STDOUT]: [com.example.examplemod.ExampleMod:init:18]: DIRT BLOCK >> tile.dirt
+[20:28:02] [Client thread/INFO] [FML]: Injecting itemstacks
+[20:28:02] [Client thread/INFO] [FML]: Itemstack injection complete
+[20:28:02] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[20:28:02] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:examplemod, FMLFileResourcePack:testmod
+[20:28:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[20:28:02] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[20:28:02] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:28:02] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[20:28:03] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[20:28:03] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:28:03] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:28:03] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[20:28:03] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[20:28:03] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:28:03] [Thread-10/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[20:28:03] [Sound Library Loader/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:28:03] [Sound Library Loader/INFO]: Sound engine started
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: The following texture errors were found.
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: ==================================================
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:   DOMAIN minecraft
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: --------------------------------------------------
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:   domain minecraft is missing 1 texture
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:     domain minecraft has 5 locations:
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:       unknown resourcepack type net.minecraft.client.resources.DefaultResourcePack : Default
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:       mod FML resources at C:\Users\jtren\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.4.1448-1.7.10\forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:       mod Forge resources at C:\Users\jtren\.gradle\caches\minecraft\net\minecraftforge\forge\1.7.10-10.13.4.1448-1.7.10\forgeSrc-1.7.10-10.13.4.1448-1.7.10.jar
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:       mod examplemod resources at C:\Users\jtren\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\libs\modid-1.0.jar
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:       mod testmod resources at C:\Users\jtren\git\Minecraft-Mod-Maker\ModMaker\testmod\MinecraftForge\build\libs\modid-1.0.jar
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: -------------------------
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:     The missing resources for domain minecraft are:
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:       textures/items/testitem.png
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: -------------------------
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]:     No other errors exist for domain minecraft
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: ==================================================
+[20:28:04] [Client thread/ERROR] [TEXTURE ERRORS]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[20:28:28] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[20:28:28] [Server thread/INFO]: Generating keypair
+[20:28:28] [Server thread/INFO] [FML]: Injecting existing block and item data into this server instance
+[20:28:28] [Server thread/INFO] [FML]: Applying holder lookups
+[20:28:28] [Server thread/INFO] [FML]: Holder lookups applied
+[20:28:28] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@7d44dd30)
+[20:28:28] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@7d44dd30)
+[20:28:28] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@7d44dd30)
+[20:28:28] [Server thread/INFO]: Preparing start region for level 0
+[20:28:29] [Server thread/INFO]: Preparing spawn area: 57%
+[20:28:30] [Server thread/INFO]: Changing view distance to 12, from 10
+[20:28:31] [Netty Client IO #0/INFO] [FML]: Server protocol version 2
+[20:28:31] [Netty IO #1/INFO] [FML]: Client protocol version 2
+[20:28:31] [Netty IO #1/INFO] [FML]: Client attempting to join with 5 mods : FML@7.10.99.99,testmod@testver,Forge@10.13.4.1448,mcp@9.05,examplemod@1.0
+[20:28:31] [Netty IO #1/INFO] [FML]: Attempting connection with missing mods [] at CLIENT
+[20:28:31] [Netty Client IO #0/INFO] [FML]: Attempting connection with missing mods [] at SERVER
+[20:28:31] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[20:28:31] [Server thread/INFO]: Player390[local:E:e43b7828] logged in with entity id 236 at (-195.62538657143966, 64.0, -104.31826231082448)
+[20:28:31] [Server thread/INFO]: Player390 joined the game
+[20:28:31] [Client thread/INFO] [FML]: [Client thread] Client side modded connection established
+[20:28:32] [Server thread/INFO]: Saving and pausing game...
+[20:28:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:28:33] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:28:33] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:28:43] [Server thread/INFO]: Saving and pausing game...
+[20:28:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:28:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:28:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:28:44] [Client thread/INFO]: Stopping!
+[20:28:44] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:28:44] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[20:28:44] [Server thread/INFO]: Stopping server
+[20:28:44] [Server thread/INFO]: Saving players
+[20:28:44] [Server thread/INFO]: Saving worlds
+[20:28:44] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[20:28:44] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[20:28:44] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[20:28:44] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[20:28:44] [Client thread/INFO] [STDOUT]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[20:28:44] [Client Shutdown Thread/INFO]: Stopping server
+[20:28:44] [Client Shutdown Thread/INFO]: Saving players
+
+BUILD SUCCESSFUL
+
+Total time: 1 mins 10.058 secs
