@@ -4,6 +4,7 @@ import urllib.request;
 import zipfile;
 import subprocess;
 import tkinter as tk;
+import json
 from shutil import copy;
 
 print("==========================================================================")
@@ -1042,13 +1043,20 @@ createmcModInfo.write('}' + '\n')
 createmcModInfo.write(']' + '\n')
 createmcModInfo.close()
 
-if language in ['US']:
-	createENUSlangFile.open  = open(ask_modName + "/en_US.lang", "w")
-	if ask_Create in ['Block', 'block', 'b']:
-		createENUSlangFile.write('tile.' + ask_blockName + '.name=' + ask_blockName)
-	if ask_Create in ['Item', 'item', 'i']:
-		createENUSlangFile.write('item.' + ask_itemName + '.name=' + ask_itemName)
-	createENUSlangFile.close()
+# if language in ['US', 'en_US']:
+	# createENUSlangFile.open  = open(ask_modName + "/en_US.lang", "w")
+	# if ask_Create in ['Block', 'block', 'b']:
+		# createENUSlangFile.write('tile.' + ask_blockName + '.name=' + ask_blockName)
+	# if ask_Create in ['Item', 'item', 'i']:
+		# createENUSlangFile.write('item.' + ask_itemName + '.name=' + ask_itemName)
+	# createENUSlangFile.close()
+	
+createlangFile = open(ask_modName + "/en_US.lang", "w")
+if ask_Create in ['Block', 'block', 'b']:
+	createlangFile.write('tile.' + ask_blockName + '.name=' + ask_blockName)
+if ask_Create in ['Item', 'item', 'i']:
+	createlangFile.write('item.' + ask_itemName + '.name=' + ask_itemName)
+createlangFile.close()
 
 print("==========================================================================")
 print("========WARNING IF YOU RE RUN THIS PROGRAM IT WILL OVERWRITE DATA=========")
@@ -1102,8 +1110,10 @@ def createMCForgeSrcFolder(directory):
 createMCForgeSrcFolder(ask_modName + '/MinecraftForge/src/main/java/com/jtrent238/modmaker/mod')
 createMCForgeSrcFolder(ask_modName + '/MinecraftForge/src/main/resources/assets/minecraft/textures/blocks')
 createMCForgeSrcFolder(ask_modName + '/MinecraftForge/src/main/resources/assets/minecraft/textures/items')
+createMCForgeSrcFolder(ask_modName + '/MinecraftForge/src/main/resources/assets/' + ask_modName + '/lang')
 
 copy(ask_modName + '/' + mainClass + '.java', ask_modName + '/MinecraftForge/src/main/java/com/jtrent238/modmaker/mod')	
+copy(ask_modName + "/en_US.lang", ask_modName + '/MinecraftForge/src/main/resources/assets/' + ask_modName + '/lang')	
 if ask_Create in ['Block', 'block', 'b']:
 	copy(ask_modName + '/' + ask_blockName + '.java', ask_modName + '/MinecraftForge/src/main/java/com/jtrent238/modmaker/mod')	
 # copy(ask_modName + '/build.gradle', ask_modName + '/MinecraftForge')
@@ -1202,5 +1212,20 @@ if ask_cleanup in ['Yes', 'yes', 'y']:
 	os.remove('compileScript.bat')
 	os.remove('runScript.bat')
 	os.remove('cleanCacheScript.bat')
+	os.remove('setupWorkspaceScript.bat')
 if ask_cleanup in ['No', 'no', 'n']:
 	print('Will NOT clean any files')
+
+if ask_Create in ['Block', 'block', 'b']:
+	json_blockName = ask_blockName
+	json_itemblock = '"block_name": "' + json_blockName + '",'
+if ask_Create in ['Item', 'item', 'i']:
+	json_itemName = ask_itemNameName
+	json_itemblock = '"item_name": "' + json_blockName + '",'
+	
+# Store data about mods made
+json_data = '{' "modname": '"' + ask_modName + '",' "modversion": '"' + ask_modVersion + '",' "username": '"' + ask_userName + '",' "created": '"' + ask_Create + '",' json_itemblock + '}'
+			
+y = json.loads(json_data)
+
+print(y["username"])
