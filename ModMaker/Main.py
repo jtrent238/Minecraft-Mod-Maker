@@ -5,6 +5,7 @@ import zipfile;
 import subprocess;
 import tkinter as tk;
 import json
+import time
 from shutil import copy;
 
 print("==========================================================================")
@@ -1216,16 +1217,39 @@ if ask_cleanup in ['Yes', 'yes', 'y']:
 if ask_cleanup in ['No', 'no', 'n']:
 	print('Will NOT clean any files')
 
-if ask_Create in ['Block', 'block', 'b']:
-	json_blockName = ask_blockName
-	json_itemblock = '"block_name": "' + json_blockName + '",'
-if ask_Create in ['Item', 'item', 'i']:
-	json_itemName = ask_itemNameName
-	json_itemblock = '"item_name": "' + json_blockName + '",'
+# if ask_Create in ['Block', 'block', 'b']:
+	# json_blockName = ask_blockName
+	# json_itemblock = '"block_name": "' + json_blockName + '",'
+# if ask_Create in ['Item', 'item', 'i']:
+	# json_itemName = ask_itemNameName
+	# json_itemblock = '"item_name": "' + json_blockName + '",'
 	
-# Store data about mods made
-json_data = '{' "modname": '"' + ask_modName + '",' "modversion": '"' + ask_modVersion + '",' "username": '"' + ask_userName + '",' "created": '"' + ask_Create + '",' json_itemblock + '}'
+# # Store data about mods made
+# json_data = '{' "modname": '"' + ask_modName + '",' "modversion": '"' + ask_modVersion + '",' "username": '"' + ask_userName + '",' "created": '"' + ask_Create + '",' json_itemblock + '}'
 			
-y = json.loads(json_data)
+# y = json.loads(json_data)
 
-print(y["username"])
+# print(y["username"])
+
+modJSON = open(ask_modName + '.json', 'w')
+modJSON.write('[' + '\n')
+modJSON.write('  {' + '\n')
+modJSON.write('    "mod_name": "' + ask_modName + '",' + '\n')
+modJSON.write('    "mod_version": "' + ask_modVersion + '",' + '\n')
+modJSON.write('    "mod_author": "' + ask_userName + '",' + '\n')
+modJSON.write('    "mod_creation_date": "' + time.strftime("%c") + '",' + '\n')
+if ask_Create in ['Item', 'item', 'i']:
+	modJSON.write('    "data_type": "item",' + '\n')
+	modJSON.write('    "item_name": "' + ask_itemName + '",' + '\n')
+if ask_Create in ['Block', 'block', 'b']:
+	modJSON.write('    "data_type": "block",' + '\n')
+	modJSON.write('    "block_name": "' + ask_blockName + '",' + '\n')
+	# modJSON.write('    "block_hardness": "' + ask_blockHardness + '",' + '\n')
+modJSON.write('    ' + '\n')
+modJSON.write('  }' + '\n')
+modJSON.write(']' + '\n')
+modJSON.close()
+
+# modsJSON = open('mods.json', 'w')
+# modsJSON.write('')
+# modsJSON.close()
